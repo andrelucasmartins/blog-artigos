@@ -27,10 +27,10 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+    // public function create()
+    // {
+    //     //
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -40,7 +40,7 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $artigo = new Article;
+        $article = new Article;
         $article->title = $request->input('title');
         $article->contents = $request->input('contents');
 
@@ -68,11 +68,11 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        // $article = Article::findOrFail( $id );
-        // $article->
-    }
+    // public function edit($id)
+    // {
+    //     // $article = Article::findOrFail( $id );
+    //     // $article->
+    // }
 
     /**
      * Update the specified resource in storage.

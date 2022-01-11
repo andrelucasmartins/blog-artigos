@@ -23,10 +23,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('articles', [ArticleController::class, 'index']);
 
 // List Single Article
-Route::post('article', [ArticleController::class, 'show']);
+Route::get('article', [ArticleController::class, 'show']);
 
 // Create new article
 Route::post('article', [ArticleController::class, 'store']);
+
+// Update article
+Route::put('article/{id}', [ArticleController::class, 'update']);
 
 // Delete article
 Route::delete('article/{id}', [ArticleController::class, 'destroy']);
